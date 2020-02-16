@@ -1,0 +1,8 @@
+/*para el auto incremento */
+CREATE OR REPLACE TRIGGER TT_ESTADO
+BEFORE INSERT ON ESTADO
+FOR EACH ROW
+BEGIN 
+SELECT SE_ESTADO.NEXTVAL INTO :NEW.id_estado FROM DUAL; 
+END;
+/*llamado la secuencia*/

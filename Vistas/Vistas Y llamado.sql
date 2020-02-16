@@ -1,0 +1,5 @@
+/*creacion de una vista para no llamar los campos de la taba*/
+CREATE OR REPLACE VIEW VW_DEPARTAMENTOS 
+AS SELECT DP.ID_DEPARTAMENTO AS CODIGO,DP.NOMBRE_DEPARTAMENTO AS NOMBRE FROM DEPARTAMENTO DP;
+/*llamado*/
+select * from VW_DEPARTAMENTOS;
